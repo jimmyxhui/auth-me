@@ -1,13 +1,10 @@
 {{page-title "AuthMe"}}
-<div class="menu">
-  …
-  {{#if this.session.isAuthenticated}}
-  <a {{on "click" this.invalidateSession}}>Logout</a>
+
+
+<nav>
+  {{#if this.auth.currentUser}}
+  <button {{on "click" this.auth.logout}} type="button">Logout</button>
   {{else}}
-  <LinkTo @route="login">Login</LinkTo>
+  <button {{on "click" this.auth.login}} type="button">Login</button>
   {{/if}}
-</div>
-<div class="main">
-  {{outlet}}
-</div>
-<LinkTo @route="authenticated">Authenticated</LinkTo>
+</nav>
