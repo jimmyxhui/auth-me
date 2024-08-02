@@ -11,7 +11,6 @@ export default class AuthService extends Service {
 
   constructor() {
     super(...arguments);
-    //https://localhost:18443/realms/jxhui/protocol/openid-connect/auth?client_id=root&response_type=token&scope=openid&redirect_uri=http://localhost:4200
 
     this.userManager = new UserManager({
       authority: 'https://localhost:18443/realms/jxhui',
