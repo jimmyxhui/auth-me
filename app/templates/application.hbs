@@ -1,6 +1,5 @@
 {{page-title "AuthMe"}}
 
-
 <nav>
   {{#if this.auth.currentUser}}
   <button {{on "click" this.auth.logout}} type="button">Logout</button>
@@ -14,3 +13,7 @@ AccessToken: {{this.auth.accessToken}}
 <p>
 Roles: {{this.auth.roles}}
 </p>
+
+<LinkTo @route="authenticated">Authenticated Route</LinkTo>
+
+{{outlet}}

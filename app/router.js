@@ -8,9 +8,7 @@ export default class Router extends EmberRouter {
 // app/router.js
 Router.map(function () {
   this.route('login');
-  this.route('authenticated', { path: '' }, function () {
-    // all routes that require the session to be authenticated
-  });
+  this.route('authenticated');
   this.route('callback');
   this.route('logout-callback');
 });

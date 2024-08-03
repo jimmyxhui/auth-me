@@ -85,4 +85,8 @@ export default class AuthService extends Service {
   get accessToken() {
     return this.currentUser?.access_token;
   }
+
+  get isAuthenticated() {
+    return !!this.currentUser && !this.currentUser.expired;
+  }
 }
